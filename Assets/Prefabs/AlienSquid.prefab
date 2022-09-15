@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &9208482730037790668
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7439174951349973640, guid: 916817b1e960b4b21af677b8424e199d, type: 3}
+      propertyPath: m_Name
+      value: AlienSquid
+      objectReference: {fileID: 0}
+    - target: {fileID: 7439174951349973652, guid: 916817b1e960b4b21af677b8424e199d, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7439174951349973652, guid: 916817b1e960b4b21af677b8424e199d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5765499
+      objectReference: {fileID: 0}
+    - target: {fileID: 7439174951349973652, guid: 916817b1e960b4b21af677b8424e199d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.030857
+      objectReference: {fileID: 0}
+    - target: {fileID: 7439174951349973652, guid: 916817b1e960b4b21af677b8424e199d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9.903395
+      objectReference: {fileID: 0}
+    - target: {fileID: 7439174951349973652, guid: 916817b1e960b4b21af677b8424e199d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7439174951349973652, guid: 916817b1e960b4b21af677b8424e199d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7439174951349973652, guid: 916817b1e960b4b21af677b8424e199d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7439174951349973652, guid: 916817b1e960b4b21af677b8424e199d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7439174951349973652, guid: 916817b1e960b4b21af677b8424e199d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7439174951349973652, guid: 916817b1e960b4b21af677b8424e199d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7439174951349973652, guid: 916817b1e960b4b21af677b8424e199d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7439174951349973652, guid: 916817b1e960b4b21af677b8424e199d, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7439174951349973655, guid: 916817b1e960b4b21af677b8424e199d, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 916817b1e960b4b21af677b8424e199d, type: 3}

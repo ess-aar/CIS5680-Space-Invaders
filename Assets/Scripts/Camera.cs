@@ -8,6 +8,11 @@ public class Camera : MonoBehaviour
   public GameObject Cam2;
   private bool flip;
 
+  void Awake()
+  {
+    Cam1.SetActive(true);
+    Cam2.SetActive(false);
+  }
   void Update()
     {
         if (Input.GetKeyDown(KeyCode.C))

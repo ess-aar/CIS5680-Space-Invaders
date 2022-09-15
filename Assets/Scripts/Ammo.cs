@@ -14,7 +14,9 @@ public class Ammo : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
-      this.destroyed.Invoke();
+      if (this.destroyed != null)
+        this.destroyed.Invoke();
+      
       Destroy(this.gameObject);
     }
 }

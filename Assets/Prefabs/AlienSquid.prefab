@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3507527081796941061, guid: 916817b1e960b4b21af677b8424e199d, type: 3}
+      propertyPath: pointValue
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 7439174951349973640, guid: 916817b1e960b4b21af677b8424e199d, type: 3}
       propertyPath: m_Name
       value: AlienSquid

@@ -4,24 +4,26 @@ using UnityEngine;
 
 public class Alien : MonoBehaviour
 {
+  public int pointValue;
+  public System.Action<int> killed;
   public System.Action hitEdge;
   public System.Action hitBottom;
-
+  
   private void OnTriggerEnter(Collider collider)
   {
     if (collider.gameObject.layer == LayerMask.NameToLayer("Laser")) {
-      // this.gameObject.SetActive(false);
+      this.killed.Invoke(pointValue);
       Destroy(this.gameObject);
     }
 
     if (collider.gameObject.layer == LayerMask.NameToLayer("Collider")) {
-      this.hitEdge.Invoke();
-      Debug.Log("hit edge!");
+      if (this.hitEdge != null)
+       this.hitEdge.Invoke();
     }
 
-    if (collider.gameObject.layer == LayerMask.NameToLayer("BottomCollider")) {
-      this.hitBottom.Invoke();
-      Debug.Log("hit bottom!");
+    if (collider.gameObject.layer == LayerMask.NameToLayer("PlayerZone")) {
+      if (this.hitBottom != null)
+       this.hitBottom.Invoke();
     }
   }
 }

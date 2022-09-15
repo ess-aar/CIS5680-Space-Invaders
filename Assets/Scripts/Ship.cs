@@ -27,6 +27,17 @@ public class Ship : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider collider)
+    {
+      if (collider.gameObject.layer == LayerMask.NameToLayer("Alien") ||
+          collider.gameObject.layer == LayerMask.NameToLayer("Missile")) {
+        GameObject obj = GameObject.Find("GlobalObject");
+        UI g = obj.GetComponent<UI>();
+        if (g.lives > 0)
+          g.lives--;
+      }
+    }
+
     private void Shoot()
     {
         Ammo laser = Instantiate(this.laser, this.transform.position, Quaternion.identity);

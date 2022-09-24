@@ -11,12 +11,15 @@ public class UI : MonoBehaviour
   public int score = 0;
   public int hiScore = 0;
   public int lives = 3;
+  public int powerups = 0;
+  public int powerupsNeeded = 5;
 
   UI uiObj;
   Text scoreText;
   Text hiScoreText;
   Text livesText;
   Text outcomeText;
+  Text powerupText;
   public System.Action gameover;
 
   void Start()
@@ -28,6 +31,7 @@ public class UI : MonoBehaviour
     hiScoreText.text = "HiScore " + this.hiScore.ToString();
     livesText = GameObject.Find("Canvas").transform.Find("Lives").GetComponent<Text>();
     outcomeText = GameObject.Find("Canvas").transform.Find("Outcome").GetComponent<Text>();
+    powerupText = GameObject.Find("Canvas").transform.Find("Powerups").GetComponent<Text>();
   }
 
   void FixedUpdate()
@@ -38,6 +42,12 @@ public class UI : MonoBehaviour
       this.gameover.Invoke();
       playing = false;
     }
+
+    if (playing && this.powerups >= this.powerupsNeeded)
+    {
+      Debug.Log("Enough Power ups collected!");
+      GameObject.Find("Ship").GetComponent<Ship>().PowerupsCollected();
+    }
   }
   
   void Update()
@@ -45,6 +55,7 @@ public class UI : MonoBehaviour
     if (playing) {
       scoreText.text = "Score " + this.score.ToString();
       livesText.text = "Lives " + this.lives.ToString();
+      powerupText.text = "Powerup " + this.powerups.ToString();
 
       if (hiScore < score) {
         hiScore = score;
@@ -61,6 +72,11 @@ public class UI : MonoBehaviour
   public void ShowYouWonMessage()
   {
     outcomeText.text = "You Won!";
+  }
+
+  public void ShowYouEscapedMessage()
+  {
+    outcomeText.text = "You Escaped!";
   }
 
   public void NewGame()
